@@ -1,2 +1,3 @@
-# LoicMangin_2_0712220
-Project 2 of OC Front-end Developer Path - Dec 2020
+# Reservia - Déc 2020
+
+Code source du __Projet 2__ - ___Transformez une maquette en site web___ du parcours __Développeur Front-end__ d'_OpenClassrooms_.
