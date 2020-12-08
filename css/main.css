@@ -1,4 +1,36 @@
+/* =============
+   CSS VARIABLES
+   ============= */
+
+/* !!! Warning: IE don't support CSS variables !!!
+/* Replace them by hard-coded values if you want IE compatibility 
+*/
+
 html {
-  font-family: Raleway, Arial, san-serif;
+  /* Spacings: */
+  --grid-1: 0.5rem; /* generally 8px */
+
+  /* Colors: */
+  --primary-500: #0065fc; /* corporate identity color: royal blue */
+  --primary-100: #deebff; /* light royal blue, for backgrounds */
+
+  --grey-100: #f2f2f2; /* light grey, for background */
+
+  /* Typography: */
+  --primary-font: Raleway, Arial, san-serif;
+
+  --txt-size: 1rem; /* generally 16px */
+
+  /* Breakpoints: */
+  --sm: 375px; /* iPhone8 width */
+}
+
+/* ========
+   RAW TAGS
+   ======== */
+
+html {
+  font-family: var(--primary-font);
+  font-size: var(--txt-size);
   font-weight: 300;
 }
