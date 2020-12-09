@@ -51,7 +51,7 @@
     <main>
       <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
 
-      <h2>En plein centre-ville ou en pleine nature</h2>
+      <h2 class="standfirst">En plein centre-ville ou en pleine nature</h2>
 
       <form role="search">
         <fieldset class="search-bar">
@@ -60,43 +60,56 @@
           <!-- TO DO: use a geolocation API to automplete this input box: -->
           <input type="text" placeholder="Ville, Pays" />
 
-          <button class="submit-button">Rechercher</button>
+          <button>Rechercher</button>
         </fieldset>
 
         <fieldset class="search-filters">
-          <legend>Filtres</legend>
-
+          <div class="legend-box">Filtres</div>
+          
           <div class="filter">
-            <i class="fas fa-money-bill-wave"></i>
-            <input type="checkbox" id="economical" name="economical" />
-            <label for="economical">&Eacute;conomique</label>
+            <input class="filter__checkbox sr-only" type="checkbox" 
+                   id="economical" name="economical" />
+            <label class="filter-label" for="economical">
+              <i class="filter-label__icon fas fa-money-bill-wave"></i>
+              <span class="filter-label__text">&Eacute;conomique</span>
+            </label>
           </div>
 
           <div class="filter">
-            <i class="fas fa-child"></i>
-            <input type="checkbox" id="family" name="family" />
-            <label for="family">Familial</label>
+            <input class="filter__checkbox sr-only" type="checkbox" 
+                   id="family" name="family" />
+            <label class="filter-label" for="family">
+              <i class="filter-label__icon fas fa-child"></i>
+              <span class="filter-label__text">Familial</span>
+            </label>
           </div>
 
           <div class="filter">
-            <i class="fas fa-heart"></i>
-            <input type="checkbox" id="romantic" name="romantic" />
-            <label for="romantic">Romantique</label>
+            <input class="filter__checkbox sr-only" type="checkbox" 
+                   id="romantic" name="romantic" />
+            <label class="filter-label" for="romantic">
+              <i class="filter-label__icon fas fa-heart"></i>
+              <span class="filter-label__text">Romantique</span>
+            </label>
           </div>
 
           <div class="filter">
-            <i class="fas fa-dog"></i>
-            <input type="checkbox" id="pet" name="pet" />
-            <label for="pet">Animaux autorisés</label>
+            <input class="filter__checkbox sr-only" type="checkbox" 
+                   id="pet" name="pet" />
+            <label class="filter-label" for="pet">
+              <i class="filter-label__icon fas fa-dog"></i>
+              <span class="filter-label__text">Romantique</span>
+            </label>
           </div>
         </fieldset>
       </form>
 
       <p class="info-hostings">
+        <i class="fas fa-info"></i>
         Plus de 500 logements sont disponibles dans cette ville
       </p>
 
-      <div class="" id="hostings">
+      <div id="hostings">
         <section class="popular-hostings">
           <h2>Les plus populaires</h2>
           <i class="fas fa-chart-line"></i>
