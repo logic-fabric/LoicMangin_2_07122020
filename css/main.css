@@ -8,18 +8,26 @@
 
 html {
   /* Spacings: */
+  --grid-xs: 0.125rem;
+  --grid-sm: 0.25rem;
   --grid-1: 0.5rem; /* generally 8px */
+  --grid-2: 1rem;
+  --grid-3: 2rem;
+  --grid-4: 4rem;
 
   /* Colors: */
   --primary-500: #0065fc; /* corporate identity color: royal blue */
   --primary-100: #deebff; /* light royal blue, for backgrounds */
 
   --grey-100: #f2f2f2; /* light grey, for background */
+  --grey-700: #555;
+  --grey-900: black; /* default "ink color" for text */
 
   /* Typography: */
   --primary-font: Raleway, Arial, san-serif;
 
   --txt-size: 1rem; /* generally 16px */
+  --h6-size: 1.1 rem;
 
   /* Breakpoints: */
   --sm: 375px; /* iPhone8 width */
@@ -30,7 +38,72 @@ html {
    ======== */
 
 html {
+  color: var(--grey-900);
   font-family: var(--primary-font);
   font-size: var(--txt-size);
   font-weight: 300;
+}
+
+a {
+  color: var(--grey-900);
+  font-weight: 400;
+  text-decoration: none;
+}
+a:hover {
+  color: var(--grey-700);
+}
+
+ul {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  padding-inline-start: 0;
+
+  list-style: none;
+}
+
+/* ====
+   PAGE
+   ==== */
+
+.page-wrapper {
+  margin: var(--grid-1) var(--grid-3) 0 var(--grid-3);
+}
+
+/* ======
+   HEADER
+   ====== */
+
+header {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.logo {
+  width: 100%;
+}
+.logo img {
+  max-height: var(--grid-4);
+}
+
+.main-menu ul {
+  display: flex;
+}
+.main-menu a {
+  display: block; 
+  padding: var(--grid-3);
+
+  font-weight: 500;
+}
+.main-menu a:hover {
+  margin-top: calc((-1) * var(--grid-xs));
+  border-top: var(--grid-xs) solid var(--primary-500);
+  
+  color: var(--primary-500);
+}
+
+header .login-btn {
+  margin: var(--grid-3);
+
+  font-weight: 700;
+  color: var(--primary-500);
 }

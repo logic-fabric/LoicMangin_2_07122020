@@ -18,7 +18,7 @@
   <link rel="apple-touch-icon" href="icon.png" />
   
   <!-- Font and icons -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;500;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;700&display=swap">
   <script src="https://kit.fontawesome.com/3bb16c2ef8.js" crossorigin="anonymous"></script>
 
   <!-- Reset CSS -->
@@ -28,176 +28,177 @@
 </head>
 
 <body>
-  <header>
-    <div class="logo">
-      <img src="img/logo-reservia.png" alt="Logo de Reservia" />
-    </div>
+  <div class="page-wrapper">
+    <header>
+      <div class="logo">
+        <img src="img/logo-reservia.png" alt="Logo de Reservia" />
+      </div>
 
-    <nav class="main-menu">
-      <ul>
-        <li>
-          <a href="#hostings">Hébergements</a>
-        </li>
-        <li>
-          <a href="#activities">Activités</a>
-        </li>
-        <li>
-          <a href="#">S'inscrire</a>
-        </li>
-      </ul>
-    </nav>
-  </header>
+      <nav class="main-menu">
+        <ul>
+          <li>
+            <a href="#hostings">Hébergements</a>
+          </li>
+          <li>
+            <a href="#activities">Activités</a>
+          </li>
+        </ul>
+      </nav>
 
-  <main>
-    <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
+      <a class="login-btn" href="#">S'inscrire</a>
+    </header>
 
-    <h2>En plein centre-ville ou en pleine nature</h2>
+    <main>
+      <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
 
-    <form role="search">
-      <fieldset class="search-bar">
-        <i class="fas fa-map-marker-alt"></i>
+      <h2>En plein centre-ville ou en pleine nature</h2>
 
-        <!-- TO DO: use a geolocation API to automplete this input box: -->
-        <input type="text" placeholder="Ville, Pays" />
+      <form role="search">
+        <fieldset class="search-bar">
+          <i class="fas fa-map-marker-alt"></i>
 
-        <button class="submit-button">Rechercher</button>
-      </fieldset>
+          <!-- TO DO: use a geolocation API to automplete this input box: -->
+          <input type="text" placeholder="Ville, Pays" />
 
-      <fieldset class="search-filters">
-        <legend>Filtres</legend>
+          <button class="submit-button">Rechercher</button>
+        </fieldset>
 
-        <div class="filter">
-          <i class="fas fa-money-bill-wave"></i>
-          <input type="checkbox" id="economical" name="economical" />
-          <label for="economical">&Eacute;conomique</label>
-        </div>
+        <fieldset class="search-filters">
+          <legend>Filtres</legend>
 
-        <div class="filter">
-          <i class="fas fa-child"></i>
-          <input type="checkbox" id="family" name="family" />
-          <label for="family">Familial</label>
-        </div>
-
-        <div class="filter">
-          <i class="fas fa-heart"></i>
-          <input type="checkbox" id="romantic" name="romantic" />
-          <label for="romantic">Romantique</label>
-        </div>
-
-        <div class="filter">
-          <i class="fas fa-dog"></i>
-          <input type="checkbox" id="pet" name="pet" />
-          <label for="pet">Animaux autorisés</label>
-        </div>
-      </fieldset>
-    </form>
-
-    <p class="info-hostings">
-      Plus de 500 logements sont disponibles dans cette ville
-    </p>
-
-    <div class="" id="hostings">
-      <section class="popular-hostings">
-        <h2>Les plus populaires</h2>
-        <i class="fas fa-chart-line"></i>
-
-        <article class="card card--hosting card--left-sided-img">
-          <div class="card__img">
-            <img src="img/hostings/hotel-soleil-matin.jpg" 
-                alt="Une chambre de l'Hôtel Le soleil du matin" />
+          <div class="filter">
+            <i class="fas fa-money-bill-wave"></i>
+            <input type="checkbox" id="economical" name="economical" />
+            <label for="economical">&Eacute;conomique</label>
           </div>
 
-          <h3 class="card__title">Hôtel le soleil du matin</h3>
-          
-          <p class="card__text">Nuit à partir de <b>128&nbsp;€</b></p>
-
-          <p class="card__rating">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-          </p>  
-        </article>
-      </section>
-      
-      <section class="town-hostings">
-        <h2>Hébergements à Marseille</h2>
-
-        <article class="card card--hosting">
-          <div class="card__img">
-            <img src="img/hostings/auberge-cannebiere.jpg" 
-                alt="Une chambre de l'auberge de la Cannebière" />
+          <div class="filter">
+            <i class="fas fa-child"></i>
+            <input type="checkbox" id="family" name="family" />
+            <label for="family">Familial</label>
           </div>
 
-          <h3>Auberge de la Cannebière</h3>
+          <div class="filter">
+            <i class="fas fa-heart"></i>
+            <input type="checkbox" id="romantic" name="romantic" />
+            <label for="romantic">Romantique</label>
+          </div>
 
-          <p class="card__text">Nuit à partir de <b>25&nbsp;€</b></p>
+          <div class="filter">
+            <i class="fas fa-dog"></i>
+            <input type="checkbox" id="pet" name="pet" />
+            <label for="pet">Animaux autorisés</label>
+          </div>
+        </fieldset>
+      </form>
 
-          <p class="card__rating">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-          </p>
+      <p class="info-hostings">
+        Plus de 500 logements sont disponibles dans cette ville
+      </p>
+
+      <div class="" id="hostings">
+        <section class="popular-hostings">
+          <h2>Les plus populaires</h2>
+          <i class="fas fa-chart-line"></i>
+
+          <article class="card card--hosting card--left-sided-img">
+            <div class="card__img">
+              <img src="img/hostings/hotel-soleil-matin.jpg" 
+                  alt="Une chambre de l'Hôtel Le soleil du matin" />
+            </div>
+
+            <h3 class="card__title">Hôtel le soleil du matin</h3>
+            
+            <p class="card__text">Nuit à partir de <b>128&nbsp;€</b></p>
+
+            <p class="card__rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </p>  
+          </article>
+        </section>
+        
+        <section class="town-hostings">
+          <h2>Hébergements à Marseille</h2>
+
+          <article class="card card--hosting">
+            <div class="card__img">
+              <img src="img/hostings/auberge-cannebiere.jpg" 
+                  alt="Une chambre de l'auberge de la Cannebière" />
+            </div>
+
+            <h3>Auberge de la Cannebière</h3>
+
+            <p class="card__text">Nuit à partir de <b>25&nbsp;€</b></p>
+
+            <p class="card__rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </p>
+          </article>
+        </section>
+      </div>
+
+      <section class="town-activities" id="activities">
+        <h2>Activités à Marseille</h2>
+
+        <article class="card card--activity">
+          <div class="card__img">
+            <img src="img/activities/vieux-port.jpg" 
+                alt="Un aperçu du Vieux Port de Marseille" />
+          </div>
+
+          <h3>Vieux Port</h3>
         </article>
       </section>
-    </div>
+    </main>
+    
+    <footer>
+      <nav class="footer-menu">
+        <h3>&Agrave; propos</h3>
 
-    <section class="town-activities" id="activities">
-      <h2>Activités à Marseille</h2>
+        <ul>
+          <li>
+            <a href="#">Fonctionnement du site</a>
+          </li>
+          <li>
+            <a href="#">Conditions générales de vente</a>
+          </li>
+          <li>
+            <a href="#">Données et confidentialité</a>
+          </li>
+        </ul>
 
-      <article class="card card--activity">
-        <div class="card__img">
-          <img src="img/activities/vieux-port.jpg" 
-               alt="Un aperçu du Vieux Port de Marseille" />
-        </div>
+        <h3>Nos hébergements</h3>
 
-        <h3>Vieux Port</h3>
-      </article>
-    </section>
-  </main>
-  
-  <footer>
-    <nav class="footer-menu">
-      <h3>&Agrave; propos</h3>
+        <ul>
+          <li>
+            <a href="#">Charte qualité</a>
+          </li>
+          <li>
+            <a href="#">Soumettre votre hôtel</a>
+          </li>
+        </ul>
 
-      <ul>
-        <li>
-          <a href="#">Fonctionnement du site</a>
-        </li>
-        <li>
-          <a href="#">Conditions générales de vente</a>
-        </li>
-        <li>
-          <a href="#">Données et confidentialité</a>
-        </li>
-      </ul>
+        <h3>Assistance</h3>
 
-      <h3>Nos hébergements</h3>
-
-      <ul>
-        <li>
-          <a href="#">Charte qualité</a>
-        </li>
-        <li>
-          <a href="#">Soumettre votre hôtel</a>
-        </li>
-      </ul>
-
-      <h3>Assistance</h3>
-
-      <ul>
-        <li>
-          <a href="#">Centre d'aide</a>
-        </li>
-        <li>
-          <a href="#">Nous contacter</a>
-        </li>
-      </ul>
-    </nav>
-  </footer>
+        <ul>
+          <li>
+            <a href="#">Centre d'aide</a>
+          </li>
+          <li>
+            <a href="#">Nous contacter</a>
+          </li>
+        </ul>
+      </nav>
+    </footer>
+  </div>
 </body>
 
 </html>
