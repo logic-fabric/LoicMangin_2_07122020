@@ -72,6 +72,12 @@ a {
   color: var(--grey-900);
   text-decoration: none;
 }
+a:focus {
+  outline: none;
+
+  color: var(--primary-500);
+  text-decoration: overline;
+}
 
 button {
   cursor: pointer;
@@ -124,6 +130,20 @@ ul {
 }
 .card.card--left-sided-img {
   margin: 0 0 var(--grid-3) 0;
+}
+
+.card a:focus {
+  color: inherit;
+  text-decoration: none;
+}
+.card a h3 {
+  transition: color 300ms, transform 250ms 50ms;
+}
+.card a:focus h3 {
+  color: var(--primary-500);
+  text-decoration: underline;
+
+  transform: translateY(calc((-1) * var(--grid-xs)));
 }
 
 .card--left-sided-img a {
@@ -292,6 +312,15 @@ h2.standfirst {
 
   transition: opacity 300ms;
 }
+.search-bar input:focus {
+  border-color: rgba(0, 0, 0, 0.3);
+  outline: none;
+}
+.search-bar button:focus {
+  outline: none;
+
+  color: var(--primary-100);
+}
 .search-bar button:hover {
   opacity: 0.75;
 }
@@ -317,6 +346,7 @@ h2.standfirst {
 }
 
 .filter-label {
+  display: inline-block;
   position: relative;
 
   padding: var(--grid-2) calc(1.5 * var(--grid-2)) var(--grid-2) 74px;
@@ -324,8 +354,19 @@ h2.standfirst {
   border-radius: var(--grid-3);
 
   cursor: pointer;
+  transform: translateY(calc((-1) * var(--grid-2)));
 
-  transition: border-color 200ms 30ms, background-color 200ms 30ms;
+  transition: border-color 200ms 30ms, box-shadow 300ms,
+    background-color 200ms 30ms, transform 250ms;
+}
+.filter__checkbox:focus + label {
+  border-color: rgba(0, 0, 0, 0.3);
+}
+.filter__checkbox:focus + label,
+.filter-label:hover {
+  box-shadow: 0 var(--grid-xs) var(--grid-sm) rgba(0, 0, 0, 0.1);
+
+  transform: translateY(calc((-1) * (var(--grid-2) + var(--grid-xs))));
 }
 .filter-label__icon,
 .filter-label__text {
@@ -450,6 +491,9 @@ h2.standfirst {
   font-size: var(--h3-size);
   font-weight: 700;
 }
+.town-hostings a:hover {
+  opacity: 0.6;
+}
 
 /* ----------
    Activities
@@ -542,6 +586,7 @@ footer {
 .footer-menu li {
   margin-bottom: var(--grid-2);
 }
+
 .footer-menu a {
   transition: opacity 300ms;
 }
