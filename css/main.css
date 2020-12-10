@@ -330,9 +330,8 @@ h2.standfirst {
    ---------------- */
 .search-filters {
   display: flex;
-  flex-wrap: wrap;
 
-  margin: var(--grid-2) 0;
+  margin: var(--grid-2) 0 0 0;
   padding: 0;
   border: 0;
 
@@ -342,7 +341,12 @@ h2.standfirst {
 
 .legend-box,
 .filter {
-  margin: var(--grid-3) var(--grid-3) var(--grid-3) 0;
+  margin: var(--grid-2) var(--grid-3) var(--grid-2) 0;
+}
+
+.filters-box {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .filter-label {
@@ -411,7 +415,7 @@ h2.standfirst {
    Info line
    --------- */
 .info-hostings {
-  margin: var(--grid-3) 0;
+  margin: var(--grid-1) 0 var(--grid-3) 0;
 }
 .info-hostings i {
   display: inline-block;
