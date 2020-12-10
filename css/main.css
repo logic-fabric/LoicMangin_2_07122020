@@ -14,6 +14,7 @@ html {
   --grid-2: 1rem;
   --grid-3: 2rem;
   --grid-4: 4rem;
+  --grid-5: 8rem;
 
   /* Colors: */
   --primary-500: #0065fc; /* corporate identity color: royal blue */
@@ -45,7 +46,7 @@ html {
   color: var(--grey-900);
   font-family: var(--primary-font);
   font-size: var(--txt-size);
-  font-weight: 300;
+  font-weight: 400;
 }
 
 h1 {
@@ -65,7 +66,6 @@ h3 {
 
 a {
   color: var(--grey-900);
-  font-weight: 400;
   text-decoration: none;
 }
 
@@ -103,7 +103,7 @@ ul {
    ==== */
 
 .page-wrapper {
-  margin: var(--grid-1) var(--grid-3) 0 var(--grid-3);
+  margin: var(--grid-1) var(--grid-4) 0 var(--grid-4);
 }
 
 /* ======
@@ -294,14 +294,146 @@ h2.standfirst {
 /* --------
    Hostings
    -------- */
+#hostings {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+#hostings section {
+  padding: var(--grid-3);
+  border-radius: var(--grid-2);
+
+  background: var(--grey-100);
+}
+#hostings h2 {
+  margin-bottom: var(--grid-3);
+}
+
 #hostings h3,
-#activities h3 {
+.popular-hostings i {
   font-size: var(--h4-size);
+}
+
+.popular-hostings {
+  flex: 4;
+
+  margin-left: var(--grid-2);
+}
+.popular-hostings__header {
+  display: flex;
+  justify-content: space-between;
+}
+.popular-hostings__header i {
+  margin: var(--grid-2) 0;
+}
+
+.popular-cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.town-hostings {
+  flex: 8;
+
+  margin-right: var(--grid-2);
+}
+
+.town-hostings__articles {
+  display: flex;
+  flex-wrap: wrap;
+}
+.town-hostings__articles .card {
+  max-width: calc((100% - 4 * var(--grid-3)) / 3);
+}
+
+.town-hostings a.see-more {
+  display: inline-block;
+
+  margin: var(--grid-3) 0;
+
+  font-size: var(--h3-size);
+  font-weight: 700;
 }
 
 /* ----------
    Activities
    ---------- */
+
+#activities h3 {
+  font-size: var(--h4-size);
+}
+
+/* ==============
+   CARD COMPONENT
+   ============== */
+
+.card {
+  margin: 0 var(--grid-3) var(--grid-3) 0;
+  padding: var(--grid-1);
+  border-radius: var(--grid-3);
+  box-shadow: 0 var(--grid-xs) var(--grid-1) rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+
+  background: white;
+
+  cursor: pointer;
+}
+.card:nth-child(3n) {
+  margin-right: 0;
+}
+.card--left-sided-img {
+  display: flex;
+
+  margin: 0 0 var(--grid-3) 0;
+}
+
+.card__img {
+  height: calc(1.1 * var(--grid-5));
+  border-radius: var(--grid-3) var(--grid-3) 0 0;
+  overflow: hidden;
+}
+.card--left-sided-img .card__img {
+  flex: 2;
+
+  height: calc(1.3 * var(--grid-5));
+  border-radius: var(--grid-3) 0 0 var(--grid-3);
+}
+.card__img img {
+  width: 100%;
+  object-fit: cover;
+}
+.card--left-sided-img .card__img img {
+  width: 100%;
+  height: 100%;
+}
+
+.card__infos {
+  position: relative;
+
+  padding: var(--grid-2);
+}
+.card--left-sided-img .card__infos {
+  flex: 3;
+}
+
+.card__title {
+  margin: 0;
+}
+
+.card__text {
+  margin-bottom: var(--grid-3);
+}
+
+.card__rating {
+  position: absolute;
+  bottom: 0;
+}
+.card__rating .fa-star {
+  color: var(--primary-500);
+}
+.card__rating .fa-star.disabled {
+  color: var(--grey-100);
+}
 
 /* ======
    FOOTER
