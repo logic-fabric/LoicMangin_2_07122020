@@ -479,7 +479,7 @@ h2.standfirst {
 .activities__articles .card__img {
   height: calc(100% - 4 * var(--grid-2));
 }
-.activities__articles .card__img img{
+.activities__articles .card__img img {
   height: 100%;
 }
 
@@ -512,6 +512,34 @@ h2.standfirst {
    FOOTER
    ====== */
 
-footer h3 {
+footer {
+  padding: calc(var(--grid-4) - var(--grid-2)) var(--grid-4);
+
+  background: var(--grey-100);
+}
+
+.footer-menu {
+  display: flex;
+}
+
+.footer-menu section {
+  width: 30%;
+  margin-right: var(--grid-4);
+}
+.footer-menu section:last-child {
+  margin-right: 0;
+}
+
+.footer-menu h3 {
   font-size: var(--h4-size);
+}
+
+.footer-menu li {
+  margin-bottom: var(--grid-2);
+}
+.footer-menu a {
+  transition: opacity 300ms;
+}
+.footer-menu a:hover {
+  opacity: 0.6;
 }
