@@ -175,18 +175,17 @@ ul {
 .card__infos {
   position: relative;
 
+  height: 118px;
   padding: var(--grid-2);
 }
 .card--left-sided-img .card__infos {
   flex: 3;
+
+  height: 134px;
 }
 
 .card__title {
   margin: 0;
-}
-
-.card__text {
-  margin-bottom: var(--grid-3);
 }
 
 .card__rating {
