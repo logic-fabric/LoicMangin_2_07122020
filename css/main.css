@@ -20,8 +20,8 @@ html {
   --primary-500: #0065fc; /* corporate identity color: royal blue */
   --primary-100: #deebff; /* light royal blue, for backgrounds */
 
-  --grey-100: #f2f2f2; /* light grey, for background */
-  --grey-900: black; /* default "ink color" for text */
+  --neutral-100: #f2f2f2; /* light grey, for background */
+  --neutral-900: black; /* default "ink color" for text */
 
   /* Typography: */
   --primary-font: Raleway, Arial, san-serif;
@@ -43,7 +43,7 @@ html {
    ======== */
 
 html {
-  color: var(--grey-900);
+  color: var(--neutral-900);
   font-family: var(--primary-font);
   font-size: var(--txt-size);
   font-weight: 400;
@@ -69,7 +69,7 @@ h3 {
 }
 
 a {
-  color: var(--grey-900);
+  color: var(--neutral-900);
   text-decoration: none;
 }
 a:focus {
@@ -198,7 +198,7 @@ ul {
   color: var(--primary-500);
 }
 .card__rating .fa-star.disabled {
-  color: var(--grey-100);
+  color: var(--neutral-100);
 }
 
 /* ====
@@ -293,13 +293,13 @@ h2.standfirst {
 .search-bar i {
   display: inline-block;
 
-  border: var(--grid-xs) solid var(--grey-100);
+  border: var(--grid-xs) solid var(--neutral -100);
   border-radius: var(--grid-2) 0 0 var(--grid-2);
 
-  background: var(--grey-100);
+  background: var(--neutral-100);
 }
 .search-bar input {
-  border: var(--grid-xs) solid var(--grey-100);
+  border: var(--grid-xs) solid var(--neutral -100);
 }
 .search-bar button {
   border: var(--grid-xs) solid var(--primary-500);
@@ -338,7 +338,7 @@ h2.standfirst {
   font-weight: 700;
 }
 
-.legend-box,
+.search-filters legend,
 .filter {
   margin: var(--grid-2) var(--grid-3) var(--grid-2) 0;
 }
@@ -353,7 +353,7 @@ h2.standfirst {
   position: relative;
 
   padding: var(--grid-2) calc(1.5 * var(--grid-2)) var(--grid-2) 74px;
-  border: var(--grid-xs) solid var(--grey-100);
+  border: var(--grid-xs) solid var(--neutral-100);
   border-radius: var(--grid-3);
 
   cursor: pointer;
@@ -423,7 +423,7 @@ h2.standfirst {
   height: var(--grid-2);
   margin-right: var(--grid-1);
   padding: var(--grid-sm);
-  border: var(--grid-xs) solid var(--grey-100);
+  border: var(--grid-xs) solid var(--neutral-100);
   border-radius: 50%;
 
   color: var(--primary-500);
@@ -442,7 +442,7 @@ h2.standfirst {
   padding: var(--grid-3);
   border-radius: var(--grid-2);
 
-  background: var(--grey-100);
+  background: var(--neutral-100);
 }
 #hostings h2 {
   margin-bottom: var(--grid-3);
@@ -567,7 +567,7 @@ h2.standfirst {
 footer {
   padding: calc(var(--grid-4) - var(--grid-2)) var(--grid-4);
 
-  background: var(--grey-100);
+  background: var(--neutral-100);
 }
 
 .footer-menu {
