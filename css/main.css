@@ -24,10 +24,15 @@ html {
   --h3-size: 1.45rem;
   --h2-size: 1.6rem;
   --h1-size: 1.8rem;
-
-  /* Breakpoints: */
-  --sm: 375px; /* iPhone8 width */
 }
+
+/* ===================================
+   DEFAULT CSS FOR EXTRA-LARGE SCREENS
+   followeb by media queries for:
+   - large screens
+   - medium screens
+   - small screens
+   =================================== */
 
 /* ========
    RAW TAGS
@@ -105,7 +110,7 @@ ul {
 .card {
   position: relative;
 
-  margin: 0 2rem 2rem 0;
+  margin: 0;
   padding: 0.5rem;
   border-radius: 2rem;
   box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.1);
@@ -263,7 +268,6 @@ h2.standfirst {
 .search-bar {
   display: flex;
 
-  width: fit-content;
   margin: 2rem 0;
   padding: 0;
   border: 0;
@@ -272,7 +276,7 @@ h2.standfirst {
   font-size: var(--h3-size);
 }
 
-.search-bar i,
+.search-bar .location-icon,
 .search-bar input,
 .search-bar button {
   margin: 0;
@@ -280,7 +284,7 @@ h2.standfirst {
 
   font-weight: 700;
 }
-.search-bar i {
+.search-bar .location-icon {
   display: inline-block;
 
   border: 0.25rem solid var(--neutral-100);
@@ -302,6 +306,10 @@ h2.standfirst {
 
   transition: opacity 300ms;
 }
+.search-bar .button-icon {
+  display: none;
+}
+
 .search-bar input:focus {
   border-color: rgba(0, 0, 0, 0.3);
   outline: none;
@@ -441,6 +449,9 @@ h2.standfirst {
 #hostings h2 {
   margin-bottom: 3rem;
 }
+#hostings .card {
+  margin-bottom: 2rem;
+}
 
 .popular-hostings {
   flex: 4;
@@ -469,13 +480,12 @@ h2.standfirst {
 .town-hostings__articles {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 .town-hostings__articles .card {
   width: calc((100% - 8rem) / 3);
 }
-.town-hostings__articles .card:nth-child(3n) {
-  margin-right: 0;
-}
+
 .town-hostings a.see-more {
   display: inline-block;
 
@@ -500,26 +510,26 @@ h2.standfirst {
 }
 
 #activities h3 {
-  font-size: var(--h4-size);
+  font-size: var(--h6-size);
 }
 
 .activities__articles {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  align-items: flex-start;
+  align-items: center;
 
   height: 34rem;
 }
 
 .activities__articles .card {
-  width: calc((100% - 10rem) / 4);
+  width: calc((100% - 6rem) / 4);
   margin: 0;
   padding: 0;
 }
 
 .activities__articles .card__img {
-  height: calc(100% - 5rem);
+  height: calc(100% - 4.5rem);
 }
 .activities__articles .card__img img {
   height: 100%;
@@ -528,7 +538,7 @@ h2.standfirst {
 .activities__articles .card__title-wrapper {
   display: flex;
 
-  height: 5rem;
+  height: 4.5rem;
 }
 .activities__articles .card__title {
   margin: auto 0;
@@ -591,4 +601,271 @@ footer {
 }
 .footer-menu a:hover {
   opacity: 0.6;
+}
+
+/* ===============================
+   MEDIA QUERIES FOR LARGE SCREENS
+   =============================== */
+
+@media screen and (max-width: 1399px) {
+  /* ----
+     Page
+     ---- */
+  .page-wrapper {
+    margin: 0 4rem;
+  }
+
+  /* ------
+     Header
+     ------ */
+  .logo img {
+    padding: 2rem 0;
+    max-height: 3rem;
+  }
+
+  .main-menu a {
+    padding: 3rem;
+  }
+
+  header .login-btn {
+    padding: 3rem 0 3rem 3rem;
+  }
+
+  /* ----------------
+    Filters fieldset
+    ---------------- */
+  .search-filters {
+    margin-bottom: 0;
+  }
+  .filter {
+    margin: 1rem;
+  }
+
+  .legend-box {
+    padding: 1rem 4rem 0 0;
+  }
+
+  /* --------
+     Hostings
+     -------- */
+  #hostings section {
+    padding: 1.5rem 2rem;
+  }
+  #hostings h2 {
+    margin-bottom: 2rem;
+  }
+
+  .town-hostings {
+    flex: 6;
+  }
+
+  .town-hostings__articles .card {
+    width: calc((100% - 4rem) / 2);
+  }
+
+  .town-hostings a.see-more {
+    margin: 1rem 0 1.5rem 0;
+  }
+
+  /* ----------
+     Activities
+     ---------- */
+  #activities {
+    margin: 3rem 0;
+  }
+
+  /* ------
+     Footer
+     ------ */
+  .footer-menu section {
+    width: 35%;
+  }
+}
+
+/* ================================
+   MEDIA QUERIES FOR MEDIUM SCREENS
+   ================================ */
+
+@media screen and (max-width: 1199px) {
+  /* ----
+     Page
+     ---- */
+  .page-wrapper {
+    margin: 0 3rem;
+  }
+
+  /* --------
+     Hostings
+     -------- */
+  #hostings .card {
+    margin-bottom: 1rem;
+  }
+
+  .town-hostings {
+    flex: 4;
+  }
+
+  .town-hostings__articles .card {
+    width: 100%;
+  }
+
+  .town-hostings a.see-more {
+    margin: 1rem 0;
+  }
+
+  /* ----------
+     Activities
+     ---------- */
+
+  .activities__articles {
+    height: 52rem;
+  }
+
+  .activities__articles .card {
+    width: calc((100% - 4rem) / 2);
+  }
+
+  .activities__articles .card.card--activity {
+    height: 16rem;
+    margin-bottom: 2rem;
+  }
+  .activities__articles .card:nth-child(3),
+  .activities__articles .card:nth-child(6) {
+    margin-bottom: 0;
+  }
+}
+
+/* ===============================
+   MEDIA QUERIES FOR SMALL SCREENS
+   =============================== */
+
+@media screen and (max-width: 799px) {
+  /* ----
+     Page
+     ---- */
+  .page-wrapper {
+    margin: 0;
+  }
+
+  /* ------
+     Header
+     ------ */
+  header {
+    position: relative;
+
+    margin-bottom: 5rem;
+  }
+
+  .logo img {
+    padding: 1.5rem 2rem;
+  }
+
+  .main-menu {
+    position: absolute;
+    top: 5rem;
+    left: 0;
+
+    width: 100%;
+  }
+  .main-menu li {
+    width: 50%;
+
+    text-align: center;
+  }
+  .main-menu a {
+    padding: 1.5rem;
+    border: 0;
+    border-bottom: 0.25rem solid var(--neutral-100);
+  }
+  .main-menu a:hover {
+    border-bottom-color: var(--primary-500);
+  }
+
+  header .login-btn {
+    padding: 3rem 2rem;
+    border-width: 0;
+  }
+
+  /* Subheader wrapper */
+  .subheader-wrapper {
+    margin: 0 2rem;
+  }
+
+  /* -------------------
+     Search bar fieldset
+     ------------------- */
+  .search-bar input {
+    width: 100%;
+  }
+  .search-bar button {
+    position: relative;
+    left: -0.5rem;
+
+    border-radius: 1rem;
+  }
+  .search-bar .button-text {
+    display: none;
+  }
+  .search-bar .button-icon {
+    display: inline-block;
+  }
+
+  /* ----------------
+     Filters fieldset
+     ---------------- */
+  .search-filters {
+    flex-direction: column;;
+  }
+
+  .filters-box {
+    margin: 1rem 0 0 -1rem;
+  }
+
+  /* --------
+     Hostings
+     -------- */
+  #hostings {
+    display: block;;
+  }
+
+  #hostings section {
+    border-radius: 0;
+  }
+  #hostings .town-hostings {
+    margin: 1rem 0 0 0;
+
+    background: white;
+  }
+
+  /* ----------
+     Activities
+     ---------- */
+   #activities {
+    margin: 2rem 2rem 1rem 2rem;
+  }
+
+  .activities__articles {
+    height: 108rem;
+  }
+
+  #activities .card {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  /* ======
+     FOOTER
+     ====== */ 
+  footer {
+    padding: 2rem 2rem 1rem 2rem;
+  }
+
+  .footer-menu {
+    flex-direction: column
+  }
+
+  .footer-menu section {
+    width: 100%;
+    margin: 0 0 1rem 0;
+  }
 }
