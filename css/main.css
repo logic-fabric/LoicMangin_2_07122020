@@ -338,10 +338,6 @@ h2.standfirst {
   font-weight: 700;
 }
 
-.filter {
-  margin: 1.5rem;
-}
-
 .legend-box {
   padding: 1.5rem 4rem 0 0;
 }
@@ -349,6 +345,10 @@ h2.standfirst {
 .filters-box {
   display: flex;
   flex-wrap: wrap;
+}
+
+.filter {
+  margin: 1.5rem;
 }
 
 .filter-label {
@@ -416,6 +416,8 @@ h2.standfirst {
    Info line
    --------- */
 .info-hostings {
+  display: flex;
+
   margin-bottom: 3rem;
 }
 .info-hostings i {
@@ -423,13 +425,15 @@ h2.standfirst {
 
   width: 1rem;
   height: 1rem;
-  margin-right: 1rem;
+  margin-right: 0.35rem;
   padding: 0.25rem;
   border: 0.125rem solid var(--neutral-100);
   border-radius: 50%;
 
   color: var(--primary-500);
   text-align: center;
+
+  transform: translateY(-0.25rem);
 }
 
 /* --------
@@ -740,6 +744,25 @@ footer {
    =============================== */
 
 @media screen and (max-width: 799px) {
+  /* --------------
+     Card Component
+     -------------- */
+  .card {
+    border-radius: 1rem;
+  }
+
+  .card--left-sided-img .card__img {
+    flex: 8;
+  }
+
+  .card--left-sided-img .card__infos {
+    flex: 9;
+  }
+
+  .card__rating {
+    font-size: var(--txt-size);
+  }
+
   /* ----
      Page
      ---- */
@@ -753,16 +776,16 @@ footer {
   header {
     position: relative;
 
-    margin-bottom: 5rem;
+    margin-bottom: 4.5rem;
   }
 
   .logo img {
-    padding: 1.5rem 2rem;
+    padding: 2rem 1.5rem;
   }
 
   .main-menu {
     position: absolute;
-    top: 5rem;
+    top: 6rem;
     left: 0;
 
     width: 100%;
@@ -773,7 +796,7 @@ footer {
     text-align: center;
   }
   .main-menu a {
-    padding: 1.5rem;
+    padding: 1rem;
     border: 0;
     border-bottom: 0.25rem solid var(--neutral-100);
   }
@@ -788,12 +811,32 @@ footer {
 
   /* Subheader wrapper */
   .subheader-wrapper {
-    margin: 0 2rem;
+    margin: 0 1.5rem;
+  }
+
+  h1 {
+    font-size: var(--h3-size);
+  }
+  h2.standfirst {
+    font-size: var(--txt-size);
   }
 
   /* -------------------
      Search bar fieldset
      ------------------- */
+  form {
+    padding-bottom: 1rem;
+  }
+
+  .search-bar {
+    font-size: var(--h6-size);
+  }
+
+  .search-bar .location-icon,
+  .search-bar input,
+  .search-bar button {
+    padding: 0.8rem 1rem;
+  }
   .search-bar input {
     width: 100%;
   }
@@ -814,54 +857,129 @@ footer {
      Filters fieldset
      ---------------- */
   .search-filters {
-    flex-direction: column;;
+    flex-direction: column;
+
+    margin: 0;
   }
 
+  .legend-box {
+    padding: 0 4rem 0 0;
+
+    font-size: var(--h5-size);
+  }
   .filters-box {
-    margin: 1rem 0 0 -1rem;
+    margin: 1rem 1 0 0;
+  }
+
+  .filter {
+    margin: 1rem 1rem 0 0;
+
+    font-size: var(--txt-size);
+  }
+
+  .filter-label {
+    padding: 0.8rem 1rem 0.8rem 3rem;
+
+    transform: translateY(0.25rem);
+  }
+
+  .filter-label__icon {
+    top: -0.125rem;
+    left: -0.5rem;
+
+    width: 0.96rem;
+    height: 0.96rem;
+    padding: 0.96rem;
+  }
+
+  /* ---------
+     Info line
+     --------- */
+  .info-hostings {
+    margin-bottom: 2rem;
+  }
+
+  .info-hostings i {
+    padding: 0.25rem 0.4rem;
   }
 
   /* --------
      Hostings
      -------- */
   #hostings {
-    display: block;;
+    display: block;
   }
-
   #hostings section {
+    padding: 1rem 1.5rem;
     border-radius: 0;
   }
-  #hostings .town-hostings {
+  #hostings h2 {
+    margin-bottom: 1.5rem;
+  }
+
+  #hostings h2,
+  .popular-hostings__header i {
+    font-size: var(--h3-size);
+  }
+
+  .popular-hostings__header i {
     margin: 1rem 0 0 0;
+  }
+
+  #hostings .town-hostings {
+    margin: 0;
 
     background: white;
+  }
+
+  .town-hostings a.see-more {
+    font-size: var(--h5-size);
   }
 
   /* ----------
      Activities
      ---------- */
-   #activities {
-    margin: 2rem 2rem 1rem 2rem;
+  #activities {
+    margin: 1rem 1.5rem 2rem 1.5rem;
+  }
+
+  #activities h2 {
+    font-size: var(--h3-size);
   }
 
   .activities__articles {
-    height: 108rem;
+    height: 81rem;
   }
 
   #activities .card {
     width: 100%;
-    margin-bottom: 2rem;
+    height: 12rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .activities__articles .card__img {
+    height: calc(100% - 3.5rem);
+  }
+  .activities__articles .card__title-wrapper {
+    display: flex;
+
+    height: 3.5rem;
+
+    font-size: var(--h6-size);
+  }
+  .activities__articles .card__title {
+    padding: 1rem 1.5rem;
   }
 
   /* ======
      FOOTER
-     ====== */ 
+     ====== */
   footer {
-    padding: 2rem 2rem 1rem 2rem;
+    padding: 2rem 1.5rem 1rem 1.5rem;
   }
 
   .footer-menu {
-    flex-direction: column
+    flex-direction: column;
   }
 
   .footer-menu section {
