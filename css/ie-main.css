@@ -476,11 +476,6 @@ h2.standfirst {
   font-size: 1.6rem;
 }
 
-.popular-hostings__articles {
-  display: flex;
-  flex-wrap: wrap;
-}
-
 .town-hostings {
   flex: 9;
 

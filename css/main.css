@@ -504,11 +504,6 @@ h2.standfirst {
   font-size: var(--h2-size);
 }
 
-.popular-hostings__articles {
-  display: flex;
-  flex-wrap: wrap;
-}
-
 .town-hostings {
   flex: 9;
 
