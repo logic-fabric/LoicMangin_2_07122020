@@ -214,8 +214,10 @@ ul {
    PAGE
    ==== */
 
-.page-wrapper {
-  margin: 0 5rem;
+.content-wrapper {
+  max-width: 1400px;
+  margin: auto;
+  padding: 0 5rem;
 }
 
 /* ======
@@ -687,7 +689,7 @@ h2.standfirst {
    ====== */
 
 footer {
-  padding: 3rem 4rem;
+  padding: 3rem 1rem;
 
   background: #f2f2f2;
 }
@@ -732,8 +734,8 @@ footer {
   /* ----
      Page
      ---- */
-  .page-wrapper {
-    margin: 0 4rem;
+  .content-wrapper {
+    padding: 0 4rem;
   }
 
   /* ------
@@ -815,8 +817,8 @@ footer {
   /* ----
      Page
      ---- */
-  .page-wrapper {
-    margin: 0 3rem;
+  .content-wrapper {
+    padding: 0 3rem;
   }
 
   /* --------
@@ -899,8 +901,8 @@ footer {
   /* ----
      Page
      ---- */
-  .page-wrapper {
-    margin: 0;
+  .content-wrapper {
+    padding: 0;
   }
 
   /* ------
