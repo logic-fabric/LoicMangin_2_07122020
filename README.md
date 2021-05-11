@@ -6,6 +6,10 @@ Code source du __Projet 2__ - ___Transformez une maquette en site web___ du parc
 
 Le rendu de ce code en __Vanilla HTML/CSS__ est accessible sur cette [GitHub Page dédiée](https://logic-fabric.github.io/LoicMangin_2_07122020/).
 
+## Maquette de l'UI
+
+L'UI de ce projet a été réalisée à partir de maquettes (format _desktop_ et _smartphone_) placées dans le dossier `/doc`.
+
 ## Détail du dossier`/css`
 
 - `main.css` contient les styles de la page _Reservia_, écrits en utilisant des variables CSS.
